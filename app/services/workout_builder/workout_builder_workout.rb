@@ -5,6 +5,8 @@ module WorkoutBuilder
         extend T::Sig
 
         GoalUpdate = T.type_alias { { workout_exercise_id: Integer, new_goal: WorkoutBuilderExercise::Goal } }
+        Goal = T.type_alias { { weight: T.nilable(Integer), reps: T.nilable(Integer), sets: T.nilable(Integer) } }
+
 
         sig { returns(T::Array[WorkoutBuilderExercise]) }
         attr_reader :exercises
@@ -19,15 +21,14 @@ module WorkoutBuilder
             @id = T.let(1, Integer)
         end
 
-        sig { params(exercise_id: Integer).returns(WorkoutBuilderExercise) }
-        def add_exercise(exercise_id)
+        sig { params(exercise_id: Integer, goal: T.nilable(Goal)).returns(WorkoutBuilderExercise) }
+        def add_exercise(exercise_id:, goal:)
+            default_goal = { weight: nil, reps: nil, sets: nil }
+            effective_goal = goal || default_goal
+
             workout_exercise = WorkoutBuilderExercise.new(
                 exercise_id: exercise_id,
-                goal: {
-                    weight: nil,
-                    reps: nil,
-                    sets: nil
-                },
+                goal: effective_goal
             )
 
             @exercises << workout_exercise

@@ -114,10 +114,10 @@ class Rails::Conductor::ActionMailbox::IncineratesController < Rails::Conductor:
   include Anonymous_Module_29
 end
 class Rails::Conductor::ActionMailbox::ReroutesController < Rails::Conductor::BaseController
-  include Anonymous_Module_26
+  include Anonymous_Module_29
 end
 class Rails::Conductor::ActionMailbox::InboundEmails::SourcesController < Rails::Conductor::BaseController
-  include Anonymous_Module_26
+  include Anonymous_Module_29
 end
 class ActionMailbox::IncinerationJob < ActiveJob::Base
 end
@@ -126,7 +126,7 @@ end
 class ActionMailbox::Record::ActiveRecord_Relation < ActiveRecord::Relation
   extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
   include ActionMailbox::Record::GeneratedRelationMethods
-  include ActiveRecord::Base::GeneratedRelationMethods
+  include ActionMailbox::Record::GeneratedRelationMethods
   include ActiveRecord::Delegation::ClassSpecificRelation
 end
 module ActionMailbox::Record::GeneratedRelationMethods
@@ -134,13 +134,13 @@ end
 class ActionMailbox::Record::ActiveRecord_Associations_CollectionProxy < ActiveRecord::Associations::CollectionProxy
   extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
   include ActionMailbox::Record::GeneratedRelationMethods
-  include ActiveRecord::Base::GeneratedRelationMethods
+  include ActionText::Record::GeneratedRelationMethods
   include ActiveRecord::Delegation::ClassSpecificRelation
 end
 class ActionMailbox::Record::ActiveRecord_AssociationRelation < ActiveRecord::AssociationRelation
   extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
   include ActionMailbox::Record::GeneratedRelationMethods
-  include ActiveRecord::Base::GeneratedRelationMethods
+  include ActionText::Record::GeneratedRelationMethods
   include ActiveRecord::Delegation::ClassSpecificRelation
 end
 class ActionMailbox::Record::ActiveRecord_DisableJoinsAssociationRelation < ActiveRecord::DisableJoinsAssociationRelation

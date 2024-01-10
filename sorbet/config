@@ -3,4 +3,4 @@
 --ignore=/tmp/
 --ignore=/vendor/bundle
 --ignore=db/migrate
-
+--ignore=spec/
