@@ -86,7 +86,7 @@ module Rails
 end
 class Rails::Conductor::BaseController < ActionController::Base
   include ActionDispatch::Routing::UrlFor
-  include Anonymous_Module_26
+  include Anonymous_Module_28
 end
 class ActionMailbox::Ingresses::Mailgun::InboundEmailsController < ActionMailbox::BaseController
   include Anonymous_Module_35
@@ -108,10 +108,10 @@ class ActionMailbox::Ingresses::Sendgrid::InboundEmailsController < ActionMailbo
   include Anonymous_Module_35
 end
 class Rails::Conductor::ActionMailbox::InboundEmailsController < Rails::Conductor::BaseController
-  include Anonymous_Module_26
+  include Anonymous_Module_27
 end
 class Rails::Conductor::ActionMailbox::IncineratesController < Rails::Conductor::BaseController
-  include Anonymous_Module_26
+  include Anonymous_Module_29
 end
 class Rails::Conductor::ActionMailbox::ReroutesController < Rails::Conductor::BaseController
   include Anonymous_Module_26

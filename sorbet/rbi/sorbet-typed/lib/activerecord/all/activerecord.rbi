@@ -690,10 +690,10 @@ end
 module ActiveRecord::Persistence
   mixes_in_class_methods(ActiveRecord::Persistence::ClassMethods)
 
-  sig { params(klass: Class).returns(T.untyped) }
+  sig { params(klass: T::Class[T.anything]).returns(T.untyped) }
   def becomes!(klass); end
 
-  sig { params(klass: Class).returns(T.untyped) }
+  sig { params(klass: T::Class[T.anything]).returns(T.untyped) }
   def becomes(klass); end
 
   sig do
@@ -1117,11 +1117,11 @@ class ActiveRecord::ConnectionAdapters::TableDefinition
   include ActiveRecord::ConnectionAdapters::ColumnMethods
 
   # Returns an array of ColumnDefinition objects for the columns of the table.
-  sig { returns(T::Array[ActiveRecord::ConnectionAdapters::ColumnDefinition]) }
+  sig { returns(T::Array[ActiveRecord::ConnectionAdapters::IndexDefinition]) }
   def columns; end
 
   # Returns a ColumnDefinition for the column with name `name`.
-  sig { params(name: T.any(String, Symbol)).returns(ActiveRecord::ConnectionAdapters::ColumnDefinition) }
+  sig { params(name: T.any(String, Symbol)).returns(ActiveRecord::ConnectionAdapters::IndexDefinition) }
   def [](name); end
 
   sig do

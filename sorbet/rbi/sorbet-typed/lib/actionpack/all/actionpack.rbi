@@ -332,7 +332,7 @@ class ActionDispatch::IntegrationTest
   sig { returns(ActionDispatch::Flash::FlashHash) }
   def flash; end
 
-  sig { returns(ActionDispatch::Request::Session) }
+  sig { returns(ActionDispatch::Session) }
   def session; end
 end
 
@@ -435,7 +435,7 @@ ActionDispatch::Response::LOCATION = T.let(T.unsafe(nil), String)
 
 ActionDispatch::Response::NO_CONTENT_CODES = T.let(T.unsafe(nil), T::Array[T.untyped])
 
-ActionDispatch::Response::NullContentTypeHeader = T.let(T.unsafe(nil), ActionDispatch::Response::ContentTypeHeader)
+ActionDispatch::Response::NullContentTypeHeader = T.let(T.unsafe(nil), ActionDispatch::Response::NullContentTypeHeader)
 
 ActionDispatch::Response::SET_COOKIE = T.let(T.unsafe(nil), String)
 
