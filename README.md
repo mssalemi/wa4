@@ -19,3 +19,5 @@ Workout Builder and Tracker is a Rails application designed to help users create
 ## Getting Started
 
 bundle exec srb tc -a
+
+bundle exec rspec
