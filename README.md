@@ -17,3 +17,5 @@ Workout Builder and Tracker is a Rails application designed to help users create
 - `ExerciseHistory`: Tracks historical data of exercises performed by users.
 
 ## Getting Started
+
+bundle exec srb tc -a
